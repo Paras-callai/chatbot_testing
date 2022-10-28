@@ -1,0 +1,4 @@
+I: Hi
+O: Hi, This is Rosa. I'm calling from the Care AI Health group. May I please speak to Mary ?
+I: yes
+O: hey Mary Smith, i can see you have active diabetes care plan with Care AI Health. How are you doing?

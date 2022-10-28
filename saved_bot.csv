@@ -1,0 +1,3 @@
+bot_name,bot_webhook,server_ip,server_port
+CCM Bot,http://35.228.104.43:8891/webhooks/rest/webhook,35.228.104.43,8891
+TCM Bot,http://35.228.104.43:8893/webhooks/rest/webhook,35.228.104.43,8893

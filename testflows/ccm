@@ -1,0 +1,22 @@
+
+Test Start
+I: /restart
+I: hi
+O: Hi, This is Rosa. I'm calling from the Care AI Health group. May I please speak to Marcus ?
+I: yes
+O: hey Marcus Vargus, i can see you have active diabetes care plan with Care AI Health. How are you doing?
+I: good
+O: Great to hear that, this call is regarding your Diabetes Care Management Plan. For this i need to verify you details to proceed.Can you please tell me your date of birth?
+Test End
+
+Test Start
+I: /restart
+I: hi
+O: Hi, This is Rosa. I'm calling from the Care AI Health group. May I please speak to Marcus ?
+I: yes
+O: hey Marcus Vargus, i can see you have active diabetes care plan with Care AI Health. How are you doing?
+I: good
+O: Great to hear that, this call is regarding your Diabetes Care Management Plan. For this i need to verify you details to proceed.Can you please tell me your date of birth?
+I: 4 jun 1987
+O: Great, Your details has been verified!. I can see you have an active diabetes careplan with 4 major goals <break time='100ms'/> Daily walk around 30-40 mins., Maintain blood glucose range before meals in range of 80-130 mg/dL., Postprandial Glucose less than 150-180 mg/dL. and Keep Weight 150-160 lbs and BMI 25 %. <break time='200ms'/>Marcus Vargus, Have you checked your blood sugar levels today ?
+Test End
