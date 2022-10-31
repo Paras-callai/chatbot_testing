@@ -94,7 +94,7 @@ with col1:
         print("DATA",data)
         response = bot_response(bot_webhook, data)
         print(response)
-        conversation_ls.append("I: "+user_message)
+        conversation_ls.append("I~> "+user_message)
         print(response.get("messages"))
         print(len(response.get("messages")))
         if len(response.get("messages")) >0:
@@ -103,8 +103,8 @@ with col1:
                 print(i)
                 rresponse.append(response.get("messages")[i].get("payload").get("display"))
             rresponse = "".join(rresponse)
-            conversation_ls.append("O: "+rresponse)
-            bot_resp = "".join(conversation_ls[1].replace("O: ",""))
+            conversation_ls.append("O~> "+rresponse)
+            bot_resp = "".join(conversation_ls[1].replace("O~> ",""))
             if agree:
                 with open("chatflow.txt", "a") as output:
                     for i in conversation_ls:
@@ -162,7 +162,7 @@ with col4:
         with open('chatflow.txt','r') as firstfile, open(f'./testflows/{file_name}','a') as secondfile:
             # read content from first file
             secondfile.write("\nTest Start\n")
-            secondfile.write("I: /restart\n")
+            secondfile.write("I~> /restart\n")
             for line in firstfile:
                 # append content to second file
                 secondfile.write(line)

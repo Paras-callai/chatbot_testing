@@ -37,7 +37,7 @@ if selection == "Upload File":
 # Just to show the selected option
 if selection != "Upload File":
     # uploaded_file = selection
-    stringio = read_file(f"/home/paras/Chatbot_testing/testflows/{selection}")
+    stringio = read_file(f"/home/ubuntu/chatbot_testing/testflows/{selection}")
 else: 
     uploaded_file = other_option
     # To read file as bytes:
@@ -67,7 +67,7 @@ if stringio is not None:
                     count_fail=0
                     refined_data = []
                     for i in d.split("\n"):
-                        s = i.split(":")
+                        s = i.split("~>")
                         for x in s[0]:
                             if x =="I" and s[1] == " /restart":
                                 url = bot_webhook
@@ -100,7 +100,7 @@ if stringio is not None:
 
                             elif x == "O":
                                 if len(refined_data)>0:
-                                    relation_map = [process.extractOne(s[1], refined_data)[0] if process.extractOne(s[1], refined_data)[1]>95 else None]
+                                    relation_map = [process.extractOne(s[1], refined_data)[0] if process.extractOne(s[1], refined_data)[1]>91 else None]
                                     if relation_map[0] != None:
                                         count_pass +=1
                                         print ("test passed")
