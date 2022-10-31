@@ -1,0 +1,20 @@
+
+Test Start
+I: /restart
+Test End
+
+Test Start
+I: /restart
+I: Hi
+O: Good morning , I am ROSA, the digital assistant to Donna Rice, RN your case manager from Call AI Health Care System. May i please speak to Marcus?
+I: yes
+O: Hi Mr.Vargus, I will be working with Donna Rice to make sure your transition to home is going smoothly and to see if you understand your discharge instructions.Donna Rice will be aware of our communications and will assist as needed.Can I have your permission to review your discharge instructions.<break time='100ms'/>
+I: yes
+O: This call will take about 20 minutes, do you have time now for this interview?<break time='100ms'/>
+I: yes
+O: Great, I am so happy you can talk. How are you feeling?<break time='100ms'/>
+I: yes
+O: That is great to hear,<break time='100ms'/> It takes time and most people begin to regain some energy when their blood sugars are in a target range or near normal. <break time='100ms'/>I will help you with your diabetes management on our future calls <break time='100ms'/> however today we will be focusing on your discharge instructions.<break time='200ms'/><break time='100ms'/>Have there been any changes since your discharge? Any Emergency Room visits? <break time='100ms'/>
+I: No
+O: That is good news. Mr.Vargus , The purpose of this call is to make sure you are coping at home post discharge and to help you manage your diabetes which often can be difficult.<break time='100ms'/> We want to make it is as easy as possible and to make sure you have the tools and support you need.<break time='200ms'/><break time='30ms'/> I will be calling you weekly to review your treatments, medications, and goals and to address any other problems you may have. <break time='100ms'/>How does this sound? <break time='100ms'/>
+Test End
