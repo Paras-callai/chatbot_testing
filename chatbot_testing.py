@@ -5,7 +5,6 @@ import pandas as pd
 bot_resp = False
 
 # Page Title
-
 st.set_page_config(
 page_title="ChatBot Testing",
 layout="wide"
@@ -45,11 +44,31 @@ if expander.button('Save Config'):
     else: 
         st.warning("Provide Bot Name is not Correct. Please provide some other name")
 
-        
+# Custom CSS for Delete Button
+    m = st.markdown("""
+    <style>
+    div:nth-child(1) > div.withScreencast > div > div > div > section.main.css-k1vhr4.egzxvld3 > div > div:nth-child(1) > div > div:nth-child(6) > div.css-1l269bu.e1tzin5v2 > div:nth-child(1) > div > div > div > button
+    {
+        background-color: #ff0000;
+        color:#ffffff;
+    }
+    div.stButton > button:hover {
+        background-color: #ffffff;
+        color:#ff0000;
+        }
+    </style>""", unsafe_allow_html=True)       
 
 ## Selected Webhook Display
 bot_webhook = f"http://{bot_server}:{bot_port}/webhooks/rest/webhook"
-st.info(bot_webhook, icon="ℹ️")
+
+col1, col2 = st.columns([1.5,0.3])
+with col1:
+    st.info(f"**Bot Name:** {options} &emsp;&emsp;&emsp; **Webhook:** {bot_webhook}", icon="ℹ️")
+with col2:
+    if (st.button("Delete",)):
+        saved_bot.drop(saved_bot[saved_bot['bot_name'] ==options].index.values[0], axis=0,inplace=True)
+        saved_bot.to_csv("saved_bot.csv", index=False)
+        st.success("Bot Configurations are deleted Successfully")
 
 ## BOT INTERACTION 
 st.write("""### Bot Interaction""")
